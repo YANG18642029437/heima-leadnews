@@ -435,6 +435,7 @@
         </testResources>
     </build>
 
+<!--    多环境配置文件-->
     <profiles>
         <profile>
             <id>dev</id>

@@ -69,9 +69,9 @@ public class MysqlCoreConfig {
         //别名
         factoryBean.setTypeAliasesPackage(this.getAliasesPackage());
         //mapper文件存储的位置
-        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = resolver.getResources(this.getMapperFilePath());
-        factoryBean.setMapperLocations(resources);
+//        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+//        Resource[] resources = resolver.getResources(this.getMapperFilePath());
+//        factoryBean.setMapperLocations(resources);
         //开启驼峰标识  user_name  --  》 userName
         org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
         configuration.setMapUnderscoreToCamelCase(true);
