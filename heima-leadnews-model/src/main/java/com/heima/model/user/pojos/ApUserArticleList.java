@@ -15,5 +15,5 @@ public class ApUserArticleList {
     private Date recommendTime;
     private Boolean isRead;
     private Integer strategyId;
-
+    private Date createdTime;
 }

@@ -36,4 +36,34 @@
     </select>
 
 
+    <select id="">
+        select * from ap_behavior_entry 
+        <where>
+            <choose>
+                <when test="userId != null">
+                    and entry_id = #{userId}
+                </when>
+                <otherwise>
+                    and entry_id = #{equipmentId}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+    <select id="">
+        select * from ap_show_behavior
+        <where>
+            entry_id = #{id}
+            <foreach collection="ids" item="item" open=" and article_id in ( " close=")" separator=",">
+                #{item}
+            </foreach>
+        </where>
+    </select>
+
+    <insert id="">
+        insert  into ap_show_behavior (entry_id, article_id,is_click, show_time,created_time) values
+        <foreach collection="ids" item="item" >
+            (#{id},#{item},0, now(),now())
+        </foreach>
+    </insert>
+
 </mapper>

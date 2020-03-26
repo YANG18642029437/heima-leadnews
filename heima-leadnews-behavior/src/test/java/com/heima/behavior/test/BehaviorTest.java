@@ -25,7 +25,7 @@ public class BehaviorTest {
     @Test
     public void testSave(){
         ApUser user = new ApUser();
-        user.setId(1l);
+        user.setId(2l);
         AppThreadLocalUtils.setUser(user);
         ShowBehaviorDto dto = new ShowBehaviorDto();
         List<ApArticle> list = new ArrayList<>();
@@ -33,6 +33,6 @@ public class BehaviorTest {
         apArticle.setId(200);
         list.add(apArticle);
         dto.setArticleIds(list);
-        appShowBehaviorService.saveShowBehavior(dto);
+        System.out.println(appShowBehaviorService.saveShowBehavior(dto));
     }
 }

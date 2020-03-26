@@ -25,9 +25,9 @@ public class ArticleTest {
 
     @Test
     public void testArticle(){
-//        ApUser apUser = new ApUser();
-//        apUser.setId(2104l);
-//        AppThreadLocalUtils.setUser(apUser);
+        ApUser apUser = new ApUser();
+        apUser.setId(2l);
+        AppThreadLocalUtils.setUser(apUser);
         ResponseResult result = articleHomeService.load(null, ArticleConstans.LOADTYPE_LOAD_MORE);
         System.out.println(result.getData());
     }
